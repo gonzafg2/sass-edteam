@@ -255,4 +255,12 @@ body {
 
 ### @import
 
+Permite estructurar distintos archivos sass y luego unificarlos en uno solo, pero para ello es importante que los archivos secundarios sean archivos parciales `_archivo`
+*Ejemplo*
+~~~
+// Tenemos un archivo parcial _variables.scss y otro archivo styles.scss
+@import "variables"
+
+body { background: $color; }
+~~~
 ## 
