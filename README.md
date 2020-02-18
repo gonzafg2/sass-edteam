@@ -11,7 +11,7 @@
 ## Sintaxis
 
 ### Variables
-* Se declaran con **$**
+* Se declaran con `$`
 * Tiene un scope si estan dentro de llaves `{ }` solo podrán usarse en esa parte, por ello mayormente se declaran de forma global (fuera de llaves). 
 * Se pueden hacer operaciones sin necesidad de colocar la unidad (px, em,rem).
 
