@@ -150,7 +150,33 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
   display: flex;
   .menu-item { color: blue; }
 }
+~~~
 
+* Propiedad.
+*Ejemplo*
+~~~
+.main {
+  font: {
+    family: arial;
+    size: 18px;
+    weigth: 700;
+  }
+  grid-template: {
+    columns: 100px 100px;
+    rows: auto;
+  }
+}
+
+/* Resultado */
+
+.main {
+  font-family: arial;
+  font-size: 18px;
+  font-weigth: 700;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: auto;
+  }
+}
 ~~~
 
 ### Tipos de datos
