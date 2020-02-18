@@ -8,7 +8,7 @@
     - [Variables](#Variables)
     - [Anidamiento](#Anidamiento)
     - [Tipos de datos](#Tipos-de-datos)
-    - [@import](#@import)
+    - [@import](#import)
 ## Sintaxis
 
 ### Variables
