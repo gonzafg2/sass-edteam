@@ -220,8 +220,8 @@ $var1: blue;
 $var2: darken(red,20);
 
 body {
-  background: $var2  color: $var1;
-;
+  background: $var2;
+  color: $var1;
 }
 
 ~~~
@@ -233,8 +233,25 @@ body {
 $var: false;
 ~~~
 
-* List
-* Maps
+* List: Son valores de propiedades separadas con espacio o comas
+*Ejemplo*
+~~~
+$var: 1px solid red;
+~~~
+
+* Maps: Su sintaxis es parecida a objetos de js
+*Ejemplo*
+~~~
+$colores: (
+  primario: red,
+  secundario: blue,
+  terciario: yellow
+);
+
+body {
+  color: map-get($colores, secundario);
+}
+~~~
 
 ### @import
 
