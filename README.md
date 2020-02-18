@@ -97,7 +97,7 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
 
 **Casos de uso**
 
-* media query
+* media query.
 *Ejemplo*
 ~~~
 .header {
@@ -108,7 +108,7 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
 }
 ~~~
 
-* animaciones
+* animaciones.
 *Ejemplo*
 ~~~
 .chat-image {
