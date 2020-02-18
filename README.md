@@ -97,7 +97,7 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
 
 **Casos de uso**
 
-* media query.
+* Media query.
 *Ejemplo*
 ~~~
 .header {
@@ -108,7 +108,7 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
 }
 ~~~
 
-* animaciones.
+* Animaciones.
 *Ejemplo*
 ~~~
 .chat-image {
@@ -119,6 +119,39 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
 }
 ~~~
 
+* Selector padre con pseudo-elemento, utilizando `&`
+*Ejemplo*
+~~~
+.link {
+  &:hover { color: green; }
+}
+~~~
+
+**Nota**: Una mala practica sería usar con selectores normales
+*Ejemplo*
+~~~
+// mala practica
+.link {
+  & li { color: green; }
+}
+~~~
+
+* Clases.
+*Ejemplo*
+~~~
+.menu {
+  display: flex;
+  &-item { color: blue; }
+}
+
+/* Resultado */
+
+.menu {
+  display: flex;
+  .menu-item { color: blue; }
+}
+
+~~~
 
 ### Tipos de datos
 
