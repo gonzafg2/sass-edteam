@@ -7,6 +7,7 @@
 1. [Sintaxis](#Sintaxis)
     - [Variables](#Variables)
     - [Anidamiento](#Anidamiento)
+    - [Tipos de datos](#Tipos-de-datos)
 
 ## Sintaxis
 
@@ -180,6 +181,60 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
 ~~~
 
 ### Tipos de datos
+
+Es importante porque aveces nos toca validar el tipo de dato pasado ej. en mixis. 
+
+`type-of`: permite saber el tipo de dato
+
+*Ejemplo*
+~~~
+$var: hola;
+type-of($var)
+~~~
+
+* String: Se utiliza con comillas o sin comillas
+
+*Ejemplo*
+~~~
+$var: 'hola';
+
+.header { content: $var; }
+~~~
+
+* Números: Son números con unidades (px, em, rem, s)
+
+*Ejemplo*
+~~~
+$var1: 1em;
+$var2: 12px;
+$time: 5s;
+
+.animacion { animation-duration: $time; }
+~~~
+
+* Colores: 
+
+*Ejemplo*
+~~~
+$var1: blue;
+$var2: darken(red,20);
+
+body {
+  background: $var2  color: $var1;
+;
+}
+
+~~~
+
+* Booleans
+
+*Ejemplo*
+~~~
+$var: false;
+~~~
+
+* List
+* Maps
 
 ### @import
 
