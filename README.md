@@ -10,7 +10,7 @@ $size: 200px
 body { padding-top: $size + 10; }
 ~~~
 
-Una opción de las variables es que se pueden sobreescribirse usando `!default` tomando el valor la que no tiene default. Ej:
+Una opción de las variables es que se pueden sobreescribir usando `!default` tomando el valor que no tiene default. Ej:
 
 ~~~
 $width: 20px !default;
@@ -33,7 +33,7 @@ $color: red;
   color: $color;
 }
 
-Como resultado:
+/* Resultado */
 
 red {
   color: red;
@@ -69,6 +69,26 @@ section {
 ~~~
 
 ### Anidamiento
+
+Permite agregar selectores dentro de otros, una buena practica es tener como máximo 02-03 anidamientos o ninguno para no generar un anidamiento extremo. Ej:
+
+~~~
+.header {
+  ul { padding: 10px; }
+  li { display: flex; }
+  a { color: blue; }
+}
+~~~
+
+Otro caso a usar es en media query. Ej:
+~~~
+.header {
+  padding: 20px;
+  @media screen and (min-width: 1024px) {
+    padding: 10px;
+  }
+}
+~~~
 
 ### Tipos de datos
 
