@@ -2,6 +2,20 @@
 
 [https://ed.team/cursos/sass](https://ed.team/cursos/sass)
 
+## Compilar sass con Node
+
+~~~
+/* node-sass archivo-entrada archivo-salida */
+
+// Se ejecuta una vez
+node-sass styles.scss styles.css
+
+// con --watch, para cada cambio se ejecuta 
+node-sass --watch styles.scss styles.css
+
+// para carpetas
+~~~
+
 ## Tabla de contenidos
 
 1. [Sintaxis](#Sintaxis)
