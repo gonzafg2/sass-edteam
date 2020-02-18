@@ -13,7 +13,8 @@ node-sass styles.scss styles.css
 // con --watch, para cada cambio se ejecuta 
 node-sass --watch styles.scss styles.css
 
-// para carpetas
+// para carpetas: node-sass --watch carpeta-entrada --output carpeta-salida
+node-sass --watch scss --output css
 ~~~
 
 ## Tabla de contenidos
