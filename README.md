@@ -95,8 +95,9 @@ Permite agregar selectores dentro de otros, una buena practica es tener como má
 }
 ~~~
 
-Otro caso a usar es en media query.
+**Casos de uso**
 
+* media query
 *Ejemplo*
 ~~~
 .header {
@@ -106,6 +107,18 @@ Otro caso a usar es en media query.
   }
 }
 ~~~
+
+* animaciones
+*Ejemplo*
+~~~
+.chat-image {
+  animation: rotacion 1s;
+  @keyframes rotacion {
+    //
+  }
+}
+~~~
+
 
 ### Tipos de datos
 
