@@ -28,6 +28,8 @@ node-sass --watch scss --output css
     - [@extend](#extend)
     - [Ciclo @for](#Ciclo-for)
     - [Ciclo @each](#Ciclo-each)
+3. [Mixins](#Mixins)
+    - Parametros y argumentos
 ## Sintaxis
 
 ### Variables
@@ -378,3 +380,29 @@ $colors: (
   .button-#{$key} { background: $value}
 }
 ~~~
+
+## Mixins
+Bloques de código css reutilizables
+*Ejemplo*
+~~~
+@mixin button { 
+  display: block; 
+  margin: 1em;
+}
+
+// se puede incluir en un selector
+.button {
+  @include button;
+}
+
+// Si se declara dentro de mixin una clase no necesita incluir clase
+@mixin button { 
+  .button {
+    display: block; 
+    margin: 1em;
+  }
+}
+// un archivo.scss 
+@include button;
+~~~
+### Parámetros y argumentos
