@@ -459,7 +459,7 @@ Bloques de código css reutilizables
 ~~~
 
 ## Funciones 
-
+Sintaxis
 ~~~
 @function nombre-funcion() { 
   //logica de la funcion 
@@ -469,3 +469,5 @@ selector {
   propiedad: nombre-funcion()
 }
 ~~~
+
+La función solo devuelve un valor 
