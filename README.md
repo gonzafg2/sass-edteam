@@ -24,6 +24,9 @@ node-sass --watch scss --output css
     - [Anidamiento](#Anidamiento)
     - [Tipos de datos](#Tipos-de-datos)
     - [@import](#import)
+2. [Ciclos y condicionales](#Ciclos-y-condicionales)
+    - [@extend](#extend)
+    
 ## Sintaxis
 
 ### Variables
@@ -278,4 +281,51 @@ Permite estructurar distintos archivos sass y luego unificarlos en uno solo, per
 
 body { background: $color; }
 ~~~
-## 
+## Ciclos y condicionales
+
+### @extend
+
+Se utiliza para selectores que comparten estilos en común.
+
+* Con selectores placeholdere
+Permite crear selectores placeholder que es como un selector pero inicia con `%` que permite declarar estilos que no se compilan por si solos por ello la directiva `@extend` que permite que un selector placeholder herede los estilos a otro selector. 
+*Ejemplo*
+~~~
+%button {
+  display: inline-block;
+  margin: 1em 0;
+  padding: .5em 1.5em;
+}
+
+.button { @extend %button; }
+.button-alert {
+  @extend %button;
+  background: red;
+  color: #fff;
+}
+~~~
+
+* Con clases
+*Ejemplo*
+~~~
+.button {
+  display: inline-block;
+  margin: 1em 0;
+  padding: .5em 1.5em;
+}
+
+.button-alert {
+  @extend .button;
+  background: red;
+  color: #fff;
+}
+~~~
+Nota: Es mejor extender un selector de clase sin anidamientos 
+
+*Para pseudoclases
+*Ejemplo*
+~~~
+.button:hover { transform: translateY(-5px); }
+.button.active { @extend .button:hover; }
+
+~~~
