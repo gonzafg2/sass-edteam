@@ -406,3 +406,66 @@ Bloques de código css reutilizables
 @include button;
 ~~~
 ### Parámetros y argumentos
+*Ejemplo*
+~~~
+@mixin button($color) {
+  .button {
+    padding: 14px 20px;
+    background-color: $color;
+  }
+}
+// otro archivo
+@include button(red)
+
+/* Resultado */
+
+.button {
+  padding: 14px 20px;
+  background-color: red;
+}
+~~~
+
+*Ejemplo2*
+~~~
+    @mixin menu($selector-item, $selector-link) {
+      display: flex;
+      #{$selector-item} { padding: 5px }
+      #{$selector-link} { text-decoration: none; }
+    }
+  
+  // otro archivo 
+  .menu { @include menu('.item', '.link') };
+  
+  /* Resultado */
+  .menu { display: flex; }
+  .menu .item { padding: 5px; }
+  .menu .link { text-decoration: none; }
+  
+~~~
+
+### Parámetros multiples
+
+*Ejemplo*
+~~~
+@mixin button($colors...) {
+    if length($colors) > 1 {
+      @for $i from 2 through length($colors) { 
+        &.#{nth($colors,$i) {
+          color: nth($colors, $i)
+        }
+      }
+    }
+}
+~~~
+
+## Funciones 
+
+~~~
+@function nombre-funcion() { 
+  //logica de la funcion 
+  return $value
+}
+selector { 
+  propiedad: nombre-funcion()
+}
+~~~
