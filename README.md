@@ -26,7 +26,8 @@ node-sass --watch scss --output css
     - [@import](#import)
 2. [Ciclos y condicionales](#Ciclos-y-condicionales)
     - [@extend](#extend)
-    
+    - [Ciclo @for](#Ciclo-@for)
+    - [Ciclo @each](#Ciclo-each)
 ## Sintaxis
 
 ### Variables
@@ -329,3 +330,39 @@ Nota: Es mejor extender un selector de clase sin anidamientos
 .button.active { @extend .button:hover; }
 
 ~~~
+
+### Ciclo @for
+*Ejemplo1*
+~~~
+// @for variable from valor-inicio through valor-final
+@for $i from 1 through 3 {
+  .column-#{i} {
+    width: $i*1%;
+  }
+}
+
+/* Resultado */
+
+.column-1 { width: 1%; }
+.column-2 { width: 2%; }
+.column-3 { width: 3%; }
+~~~
+
+*Ejemplo2*
+~~~
+@for $i from 1 through 5 {
+  @if $i % 2 == 0 {
+    .column-#{i} {
+       width: $i*5%;
+     }
+  }  
+}
+
+/* Resultado */
+
+.column-2 { width: 10%; }
+.column-4 { width: 20%; }
+~~~
+
+### Ciclo @each
+
