@@ -26,7 +26,7 @@ node-sass --watch scss --output css
     - [@import](#import)
 2. [Ciclos y condicionales](#Ciclos-y-condicionales)
     - [@extend](#extend)
-    - [Ciclo @for](#Ciclo-@for)
+    - [Ciclo @for](#Ciclo-for)
     - [Ciclo @each](#Ciclo-each)
 ## Sintaxis
 
@@ -365,4 +365,16 @@ Nota: Es mejor extender un selector de clase sin anidamientos
 ~~~
 
 ### Ciclo @each
-
+Sirve para iterar mapas
+*Ejemplo*
+~~~
+$colors: (
+  primary: red;
+  secondary: green;
+  tertiary: blue
+)
+// @each $key, $value in nombre-mapa 
+@each $key, $value in $colors {
+  .button-#{$key} { background: $value}
+}
+~~~
