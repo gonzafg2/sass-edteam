@@ -5,6 +5,9 @@
 ## Compilar sass con Node
 
 ~~~
+/*  Instalar sass de forma general */
+npm install -g node-sass
+
 /* node-sass archivo-entrada archivo-salida */
 
 // Se ejecuta una vez
